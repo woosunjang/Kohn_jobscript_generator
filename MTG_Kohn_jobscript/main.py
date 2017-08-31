@@ -1,6 +1,35 @@
 #!/usr/bin/python
 import argparse
 
+class Kohn(object):
+    def __init__(self, outfile):
+        self.outfile = outfile
+
+
+    def node_info(self, node_group):
+        if node_group == 'shm':
+            num_nodes_max = 4
+            num_cores_max = 8
+            opt_level = 'NOR'
+        elif node_group == 'west':
+            num_nodes_max = 4
+            num_cores_max = 8
+            opt_level = 'NOR'
+        elif node_group == 'west2':
+            num_nodes_max = 4
+            num_cores_max = 12
+            opt_level = 'NOR'
+        elif node_group == 'sandy':
+            num_nodes_max = 8
+            num_cores_max = 12
+            opt_level = 'AVX1'
+        elif node_group == 'xeon':
+            num_nodes_max = 8
+            num_cores_max = 20
+            opt_level = 'AVX2'
+
+        return num_nodes_max, num_cores_max, opt_level
+
 
 
 def main():
