@@ -161,6 +161,11 @@ class Kohn(object):
         return
 
     def exceptions(self):
+        # Node exceptions
+        if self.nodegroup == 'shm':
+            if self.numnode != 1:
+                raise RuntimeError('Infiniband linking is not possible in shm nodes!')
+
         # VASP exceptions
         if self.prog == 'vasp':
             if self.ver == '5.3.5':
