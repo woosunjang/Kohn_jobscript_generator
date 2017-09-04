@@ -2,6 +2,6 @@
 
 Python script to generate PBS jobscript in MTG-Kohn local machine.
 
-Materials Theory Group
+2017 Materials Theory Group
 
-https://materials-theory.org
+http://www.materials-theory.org
