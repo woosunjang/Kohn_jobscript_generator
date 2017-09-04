@@ -2,7 +2,6 @@
 import argparse
 
 
-# TODO: shm infiniband warning
 class Kohn(object):
     def __init__(self, outfile, jobname, nodegroup, numnode, corepernode, walltime, program, version, options):
         self.outfile = outfile
